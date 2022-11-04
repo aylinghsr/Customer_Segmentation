@@ -96,8 +96,8 @@ def majority_voting(*args):
 
 
 def main():
-    train = pd.read_csv('Train.csv')
-    test = pd.merge(pd.read_csv('Test.csv'), pd.read_csv('sample_submission.csv'), on='ID')
+    train = pd.read_csv('dataset/Train.csv')
+    test = pd.merge(pd.read_csv('dataset/Test.csv'), pd.read_csv('dataset/sample_submission.csv'), on='ID')
     preprocess(train)
     preprocess(test)
     X_train, y_train = split(train)
